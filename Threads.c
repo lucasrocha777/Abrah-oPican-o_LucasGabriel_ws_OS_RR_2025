@@ -72,8 +72,8 @@ int main() {
     struct timespec start, end;
     clock_gettime(CLOCK_MONOTONIC, &start);
 
-    const char* directory = ".\\files"; // Diretório onde os arquivos .txt estão
-    const char* keywords[] = {"example", "test"}; // Múltiplas palavras-chave
+    const char* directory = "C:\\Users\\neres\\Documents\\txt_teste"; // Diretório corrigido com \\ para escape
+    const char* keywords[] = {"856", "987"}; // Múltiplas palavras-chave
     int keyword_count = 2;
     char* files[MAX_FILES];
     int file_count = 0;
