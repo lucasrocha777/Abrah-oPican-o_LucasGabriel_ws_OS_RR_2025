@@ -24,12 +24,13 @@ Desenvolver uma aplicação em **Rust** que realiza a **busca por uma ou mais pa
 
 ##  Tecnologias Utilizadas
 
-- **Rust** (linguagem de programação principal)
-- **Crates**:
-  - `rayon` (paralelismo)
-  - `walkdir` (varredura de diretórios)
-  - `regex` (busca por padrões)
-  - `chrono` (medição de tempo)
+- **C++** (linguagem de programação principal)
+- **Bibliotecas**:
+  - `<thread>` (paralelismo)
+  - `<filesystem>` (para percorrer diretórios - C++)
+  - `<regex>` (busca por padrões de texto)
+  - `<chrono>` (para medição de tempo)
+  - `<mutex>` (Sincronização entre threads)
 
 ---
 
@@ -37,19 +38,23 @@ Desenvolver uma aplicação em **Rust** que realiza a **busca por uma ou mais pa
 
 ### Pré-requisitos:
 
-- Ter o [Rust](https://www.rust-lang.org/tools/install) instalado.
+- Compilador com suporte ao padrão C++ 17 ou superior.
+- Sistema com suporte à biblioteca <filesystem>.
 
 ### Passos:
 
 Clone o repositório:
-git clone https://github.com/Aluno1Aluno2_ws_OS_RR_2025.git  
+git clone https://github.com/Abrah-oPican-o_LucasGabriel_ws_OS_RR_2025.git
 cd Abrah-oPican-o_LucasGabriel_ws_OS_RR_2025
 
-Compile e execute:
-cargo run -- <palavra-chave> <caminho/do/diretorio>
+Compile o projeto:
+g++ -std=c++17 -pthread -o buscador src/main.cpp
+
+Execute o programa:
+./buscador <palavra-chave> <caminho/do/diretorio>
 
 Exemplo:
-cargo run -- "sistemas" ./textos/
+./buscador "sistemas" ./textos/
 
 ---
 
@@ -83,7 +88,7 @@ Durante a apresentação, serão exibidos os seguintes dados:
 
 Aluno1Aluno2_ws_OS_RR_2025/  
 ├── src/  
-│   └── main.rs         # Código-fonte principal  
+│   └── main.cpp        # Código-fonte principal  
 ├── textos/             # Diretório com arquivos .txt de exemplo  
 ├── resultados/         # Resultados e testes com tempos  
 ├── slides/             # Slides da apresentação  
